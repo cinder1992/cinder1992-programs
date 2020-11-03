@@ -3,7 +3,7 @@ local label = require("crui/label")
 local box = {
     text = "", --Boxes don't have text
     title = "", --Boxes have Titles.
-    style = {"┌","─","┐"}, {"┐","│","┘"}, {"└","─","┘"}, {"┌","│","└"}, },
+    style = { {"┌","─","┐"}, {"┐","│","┘"}, {"└","─","┘"}, {"┌","│","└"}, },
     shadowStyle = { nil, {"▖","▌","▘"}, {"▝","▀","▘"} },
 }
 

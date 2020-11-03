@@ -24,7 +24,7 @@ function label:draw(gpu)
     gpu.setBackground(self.bg)
     gpu.fill(self.x, self.y, self.w, self.h, " ")
     if self.text ~= nil or self.text ~= "" then
-        local x = self.x + math.floor((self.w - #self.text) / 2)
+        local x = self.x + math.floor(self.w / 2 - #self.text / 2)
         local y = self.y + math.floor(self.h / 2) 
         gpu.set(x, y, self.text)
     end
