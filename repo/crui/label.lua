@@ -19,7 +19,7 @@ function label:new(o)
 end
 
 function label:draw(gpu)
-    if #self.text > w then error("Text too long!") end
+    if #self.text > self.w then error("Text too long!") end
     gpu.setForeground(self.fg)
     gpu.setBackgroundI(self.bg)
     gpu.fill(self.x, self.y, self.w, self.h, " ")
