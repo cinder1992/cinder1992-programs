@@ -6,8 +6,8 @@ local label = {
     h = 1,
     x = 1,
     y = 1,
-    fg = 0xFFFFFF
-    bg = 0x0000AA
+    fg = 0xFFFFFF,
+    bg = 0x0000AA,
 }
 
 function label:new(o)
