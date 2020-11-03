@@ -3,8 +3,8 @@ local label = require("crui/label")
 local box = {
     text = "", --Boxes don't have text
     title = "", --Boxes have Titles.
-    style = [ ["┌","─","┐"], ["┐","│","┘"], ["└","─","┘"], ["┌","│","└"], ],
-    shadowStyle = [ nil, ["▖","▌","▘"], ["▝","▀","▘"], nil, ],
+    style = {"┌","─","┐"}, {"┐","│","┘"}, {"└","─","┘"}, {"┌","│","└"}, },
+    shadowStyle = { nil, {"▖","▌","▘"}, {"▝","▀","▘"}},
 }
 
 box = label:new(box) --inherit label
