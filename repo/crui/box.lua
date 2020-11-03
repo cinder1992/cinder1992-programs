@@ -3,14 +3,14 @@ local label = require("crui/label")
 local box = {
     text = "", --Boxes don't have text
     title = "", --Boxes have Titles.
-    style = [ ["┌","─","┐"], ["┐","│","┘"], ["└","─","┘"], ["┌","│","└"] ],
-    shadowStyle = [nil, ["▖","▌","▘"], ["▝","▀","▘"], nil],
+    style = [ ["┌","─","┐"], ["┐","│","┘"], ["└","─","┘"], ["┌","│","└"], ],
+    shadowStyle = [ nil, ["▖","▌","▘"], ["▝","▀","▘"], nil, ],
 }
 
 box = label:new(box) --inherit label
 
 function box:draw(gpu)
-    label.draw(self, gpu) --draw our label
+    label.draw({x=self.x+1, y=self.y+1, w=self.w-1, h=self.h-1, fg=self.fg, bg=self.bg}, gpu) --draw our label
 end
 
 function box:drawBorder(gpu)
