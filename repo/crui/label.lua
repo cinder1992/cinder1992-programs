@@ -19,15 +19,15 @@ function label:new(o)
 end
 
 function label:draw(gpu)
-    --if #self.text > self.w then error("Text too long!") end
+    if #self.text > self.w then error("Text too long!") end
     gpu.setForeground(self.fg)
     gpu.setBackground(self.bg)
     gpu.fill(self.x, self.y, self.w, self.h, " ")
-    --if self.text ~= nil or self.text ~= "" then
-        local x = self.x + math.floor(self.w - #self.text / 2)
+    if self.text ~= nil or self.text ~= "" then
+        local x = self.x + math.floor((self.w - #self.text) / 2)
         local y = self.y + math.floor(self.h / 2) 
         gpu.set(x, y, self.text)
-    --end
+    end
 end
 
 return label
