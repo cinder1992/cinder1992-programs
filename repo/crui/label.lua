@@ -13,7 +13,7 @@ local label = {
 function label:new(o)
     o = o or {}
     setmetatable(o, self)
-    self._index = self
+    self.__index = self
     return o
 end
 

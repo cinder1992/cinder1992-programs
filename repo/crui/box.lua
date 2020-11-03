@@ -4,7 +4,7 @@ local box = {
     text = "", --Boxes don't have text
     title = "", --Boxes have Titles.
     style = {"┌","─","┐"}, {"┐","│","┘"}, {"└","─","┘"}, {"┌","│","└"}, },
-    shadowStyle = { nil, {"▖","▌","▘"}, {"▝","▀","▘"}},
+    shadowStyle = { nil, {"▖","▌","▘"}, {"▝","▀","▘"} },
 }
 
 box = label:new(box) --inherit label
