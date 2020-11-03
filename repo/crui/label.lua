@@ -1,4 +1,5 @@
 local math = math
+local string = string
 
 local label = {
     text = "",
@@ -18,12 +19,12 @@ function label:new(o)
 end
 
 function label:draw(gpu)
-    if self.text:len() > w then error("Text too long!") end
+    if string.len(self.text) > w then error("Text too long!") end
     gpu.setForeground(self.fg)
     gpu.setBackgroundI(self.bg)
     gpu.fill(self.x, self.y, self.w, self.h, " ")
     if self.text ~= nil or self.text ~= "" then
-        local x = self.x + math.floor(self.w - self.text:len() / 2)
+        local x = self.x + math.floor(self.w - string.len(self.text) / 2)
         local y = self.y + math.floor(self.h / 2) 
         gpu.set(x, y, self.text)
     end
