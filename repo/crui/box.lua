@@ -1,10 +1,10 @@
 local label = require("crui/label")
 
 local box = {
-    text = "" --Boxes don't have text
-    title= "" --Boxes have Titles.
+    text = "", --Boxes don't have text
+    title= "", --Boxes have Titles.
     style = [ ["┌","─","┐"], ["┐","│","┘"], ["└","─","┘"], ["┌","│","└"] ],
-    shadowStyle = [nil, ["▖","▌","▘"], ["▝","▀","▘"], nil]
+    shadowStyle = [nil, ["▖","▌","▘"], ["▝","▀","▘"], nil],
     
 }
 
@@ -18,7 +18,6 @@ function box:drawBorder(gpu)
 end
 
 function box:assembleBorder(side, width)
-
 end
 
 return box
